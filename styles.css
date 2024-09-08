@@ -1,8 +1,8 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #333;
+    color: #ccc;
     margin: 0;
     padding: 0;
 }
@@ -10,7 +10,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: white;
+    background-color: #222;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -39,7 +39,7 @@ section {
 }
 
 h2 {
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #ccc;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
@@ -79,4 +79,62 @@ button:hover {
     button {
         padding: 8px;
     }
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Resume Display Styles */
+#resume-display {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#resume-display h1,
+#resume-display h2 {
+    margin-top: 0;
+}
+
+#resume-display ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resume-display ul li {
+    background-color: #007BFF;
+    color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
 }

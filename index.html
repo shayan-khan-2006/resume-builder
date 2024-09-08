@@ -6,51 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackathon</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
     <div class="container">
-        <!-- Personal Information -->
-        <section id="personal-info">
-            <img src="user.png" alt="Profile Picture" class="profile-picture">
-            <h1>Shayan Khan</h1>
-            <p>Email: muhammadshayan2006khan@gmail.com</p>
-            <p>Phone: 0370 8247076</p>
-        </section>
+        <!-- Form for User Input -->
+        <form id="resume-form">
+            <h2>Personal Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required>
 
-        <!-- Education -->
-        <section id="education">
             <h2>Education</h2>
-            <ul>
-                <li>Bachelor of Science in Computer Science, XYZ University</li>
-                <li>Master of Science in Software Engineering, ABC University</li>
-            </ul>
-        </section>
+            <label for="education">Education:</label>
+            <input type="text" id="education" placeholder="Degree, University" required>
 
-        <!-- Skills -->
-        <section id="skills">
             <h2>Skills</h2>
-            <ul>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>HTML & CSS</li>
-                <li>React</li>
-            </ul>
-        </section>
+            <label for="skills">Skills (comma-separated):</label>
+            <input type="text" id="skills" placeholder="e.g., JavaScript, TypeScript" required>
 
-        <!-- Work Experience -->
-        <section id="work-experience">
             <h2>Work Experience</h2>
-            <ul>
-                <li>Software Developer at TechCorp (2018 - Present)</li>
-                <li>Intern at DevStartup (2016 - 2017)</li>
+            <label for="work-experience">Work Experience:</label>
+            <input type="text" id="work-experience" placeholder="Position, Company, Years" required>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+
+        <!-- Generated Resume -->
+        <div id="resume-display" style="display: none;">
+            <h1 id="display-name" contenteditable="true"></h1>
+            <p id="display-email" contenteditable="true"></p>
+            <p id="display-phone" contenteditable="true"></p>
+
+            <h2>Education</h2>
+            <p id="display-education" contenteditable="true"></p>
+
+            <h2>Skills</h2>
+            <ul id="display-skills">
+                <!-- Skills will be rendered as <li> elements with contenteditable attributes -->
             </ul>
-        </section>
 
-        <!-- Toggle Button for Skills Section -->
-        <button id="toggle-skills">Toggle Skills Section</button>
+            <h2>Work Experience</h2>
+            <p id="display-work-experience" contenteditable="true"></p>
+
+        </div>
+
+
+        <button id="share-link">Copy Shareable Link</button>
+        <br>
+        <button id="download-pdf">Download PDF</button>
     </div>
-
+    <!-- <script src="html2pdf/dist/html2pdf.bundle.min.js"></script> -->
     <script src="script.js"></script>
 </body>
 
